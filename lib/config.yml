@@ -1,6 +1,6 @@
 #
 # TriMet MOD Map
-# Config built on: Friday, August 30, 2019 @ 10:07am
+# Config built on: Tuesday, October 22, 2019 @ 4:28pm
 #
 
 # react-router config, for URL routing (not to be confused with multimodal/OTP routing)
@@ -71,33 +71,10 @@ map:
       refresh: 5
       default: 'all'
 
-    - type: car-rental
-      name: car2go Locations
-      modes:
-        - CAR_RENT
-      companies:
-        - CAR2GO
-      mapSymbols:
-        - maxZoom: 12
-          minZoom: 0
-          type: circle
-          pixels: 3
-          fillColor: "#009cde"
-          strokeColor: "#FFFFFF"
-        - maxZoom: 15
-          minZoom: 13
-          type: circle
-          pixels: 5
-          fillColor: "#009cde"
-          strokeColor: "#FFFFFF"
-        - maxZoom: 20
-          minZoom: 16
-          fillColor: "#009cde"
-          type: marker
 
     - type: zipcar
       name: Zipcar Locations
-      api: https://betaplanner.trimet.org/ws/carshare/zipcar/data.json
+      api: https://newplanner.trimet.org/ws/carshare/zipcar/data.json
 
     - type: bike-rental
       name: BIKETOWN Locations
@@ -280,7 +257,7 @@ map:
 
 
 geocoder:
-  baseUrl: https://betaplanner.trimet.org/ws/solrwrap/v0/pelias
+  baseUrl: https://newplanner.trimet.org/ws/solrwrap/v0/pelias
   maxNearbyStops: 6
   type: PELIAS
   boundary:
@@ -313,9 +290,6 @@ modes:
       label: Transit + E-scooter
     - mode: CAR_PARK
       label: Park & Ride
-    - mode: CAR_RENT
-      label: Transit + car2go
-      company: CAR2GO
     - mode: CAR_HAIL
       label: Transit + Uber
       company: UBER
@@ -345,9 +319,6 @@ companies:
   - id: BIKETOWN
     label: BIKETOWN
     modes: BICYCLE_RENT
-  - id: CAR2GO
-    label: car2go
-    modes: CAR_RENT
   - id: UBER
     label: Uber
     modes: CAR_HAIL
@@ -406,7 +377,7 @@ dateTime:
 
 # Alternate TransitIndex API
 alternateTransitIndex:
-  apiRoot: https://betaplanner.trimet.org/ws/ti/v0/
+  apiRoot: https://newplanner.trimet.org/ws/ti/v0/
   services:
      - stops
      - stops/routes
