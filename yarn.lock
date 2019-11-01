@@ -7883,9 +7883,9 @@ osenv@0, osenv@^0.1.4:
     os-homedir "^1.0.0"
     os-tmpdir "^1.0.0"
 
-"otp-react-redux@github:TriMetPDX/otp-react-redux#september-release-09_12_2019":
+"otp-react-redux@github:TriMetPDX/otp-react-redux#november-release_no_car2go_rt_geom_working":
   version "0.1.0"
-  resolved "https://codeload.github.com/TriMetPDX/otp-react-redux/tar.gz/330e0e3175aeca6d713f4454d321fef5202e8f1b"
+  resolved "https://codeload.github.com/TriMetPDX/otp-react-redux/tar.gz/ef9e0602ca8691dd59837b6014068255f04885c8"
   dependencies:
     "@conveyal/geocoder-arcgis-geojson" "^0.0.2"
     "@conveyal/lonlat" "^1.1.0"
@@ -7932,7 +7932,7 @@ osenv@0, osenv@^0.1.4:
     redux-logger "^2.7.4"
     redux-thunk "^2.3.0"
     throttle-debounce "^2.0.1"
-    transit-components "github:OpenTransitTools/transit-components#september-release-09_12_2019"
+    transit-components "github:OpenTransitTools/transit-components#master"
     transitive-js "^0.13.0"
     turf-along "^3.0.12"
     velocity-react "^1.3.3"
@@ -10627,9 +10627,9 @@ tough-cookie@~2.4.3:
     psl "^1.1.24"
     punycode "^1.4.1"
 
-"transit-components@github:OpenTransitTools/transit-components#september-release-09_12_2019":
+"transit-components@github:OpenTransitTools/transit-components#master":
   version "0.1.0"
-  resolved "https://codeload.github.com/OpenTransitTools/transit-components/tar.gz/93d6f2f60c2a9c4b14d37ee0e231834b509cfe67"
+  resolved "https://codeload.github.com/OpenTransitTools/transit-components/tar.gz/def1e5e18381c10bc569b0670736a9ba28faad8b"
   dependencies:
     "@mapbox/polyline" "^0.2.0"
     "@turf/turf" "^5.1.6"
