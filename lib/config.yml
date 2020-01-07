@@ -1,6 +1,6 @@
 #
 # TriMet MOD Map
-# Config built on: Tuesday, October 22, 2019 @ 4:28pm
+# Config built on: Tuesday, January 7, 2020 @ 12:30pm
 #
 
 # react-router config, for URL routing (not to be confused with multimodal/OTP routing)
@@ -99,53 +99,7 @@ map:
           dockStrokeColor: "#000000"
           type: hubAndFloatingBike
 
-    - type: micromobility-rental
-      name: Bird E-scooter Locations
-      modes:
-        - MICROMOBILITY_RENT
-      companies:
-        - BIRD
-      mapSymbols:
-        - maxZoom: 12
-          minZoom: 0
-          type: circle
-          pixels: 3
-          fillColor: "#656565"
-          strokeColor: "#CCCCCC"
-        - maxZoom: 15
-          minZoom: 13
-          type: circle
-          pixels: 5
-          fillColor: "#656565"
-          strokeColor: "#CCCCCC"
-        - maxZoom: 20
-          minZoom: 16
-          fillColor: "#656565"
-          type: marker
 
-    - type: micromobility-rental
-      name: Bolt E-scooter Locations
-      modes:
-        - MICROMOBILITY_RENT
-      companies:
-        - BOLT
-      mapSymbols:
-        - maxZoom: 12
-          minZoom: 0
-          type: circle
-          pixels: 3
-          fillColor: "#656565"
-          strokeColor: "#CCCCCC"
-        - maxZoom: 15
-          minZoom: 13
-          type: circle
-          pixels: 5
-          fillColor: "#656565"
-          strokeColor: "#CCCCCC"
-        - maxZoom: 20
-          minZoom: 16
-          fillColor: "#656565"
-          type: marker
 
 
     - type: micromobility-rental
@@ -323,12 +277,6 @@ companies:
     label: Uber
     modes: CAR_HAIL
 
-  - id: BIRD
-    label: Bird
-    modes: MICROMOBILITY_RENT
-  - id: BOLT
-    label: Bolt
-    modes: MICROMOBILITY_RENT
   - id: LIME
     label: Lime
     modes: MICROMOBILITY_RENT
