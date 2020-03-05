@@ -1,6 +1,6 @@
 #
 # TriMet MOD Map
-# Config built on: Tuesday, January 7, 2020 @ 12:30pm
+# Config built on: Wednesday, March 4, 2020 @ 9:14pm
 #
 
 # react-router config, for URL routing (not to be confused with multimodal/OTP routing)
@@ -55,11 +55,11 @@ map:
   baseLayers:
     - name: Streets
       url: //tile{s}.trimet.org/tilecache/tilecache.py/1.0.0/currentOSM/{z}/{x}/{y}
-      attribution: 'Map tiles: <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
+      attribution: '&copy; <a target="#" href="https://www.oregonmetro.gov/rlis-live">Metro</a> | &copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a>'
       maxZoom: 20
     - name: Aerials
       url: //tile{s}.trimet.org/tilecache/tilecache.py/1.0.0/hybridOSM/{z}/{x}/{y}
-      attribution: 'Map tiles: <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
+      attribution: '&copy; <a target="#" href="https://www.oregonmetro.gov/rlis-live">Metro</a> | &copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a>'
       maxZoom: 20
 
   overlays:
@@ -99,6 +99,29 @@ map:
           dockStrokeColor: "#000000"
           type: hubAndFloatingBike
 
+    - type: micromobility-rental
+      name: Bird E-scooter Locations
+      modes:
+        - MICROMOBILITY_RENT
+      companies:
+        - BIRD
+      mapSymbols:
+        - maxZoom: 12
+          minZoom: 0
+          type: circle
+          pixels: 3
+          fillColor: "#656565"
+          strokeColor: "#CCCCCC"
+        - maxZoom: 15
+          minZoom: 13
+          type: circle
+          pixels: 5
+          fillColor: "#656565"
+          strokeColor: "#CCCCCC"
+        - maxZoom: 20
+          minZoom: 16
+          fillColor: "#656565"
+          type: marker
 
 
 
@@ -150,29 +173,6 @@ map:
           fillColor: "#656565"
           type: marker
 
-    - type: micromobility-rental
-      name: Shared E-scooter Locations
-      modes:
-        - MICROMOBILITY_RENT
-      companies:
-        - SHARED
-      mapSymbols:
-        - maxZoom: 12
-          minZoom: 0
-          type: circle
-          pixels: 3
-          fillColor: "#656565"
-          strokeColor: "#CCCCCC"
-        - maxZoom: 15
-          minZoom: 13
-          type: circle
-          pixels: 5
-          fillColor: "#656565"
-          strokeColor: "#CCCCCC"
-        - maxZoom: 20
-          minZoom: 16
-          fillColor: "#656565"
-          type: marker
 
     - type: micromobility-rental
       name: Spin E-scooter Locations
@@ -211,7 +211,7 @@ map:
 
 
 geocoder:
-  baseUrl: https://newplanner.trimet.org/ws/solrwrap/v0/pelias
+  baseUrl: https://ws-st.trimet.org/peliaswrap/v1
   maxNearbyStops: 6
   type: PELIAS
   boundary:
@@ -277,14 +277,14 @@ companies:
     label: Uber
     modes: CAR_HAIL
 
+  - id: BIRD
+    label: Bird
+    modes: MICROMOBILITY_RENT
   - id: LIME
     label: Lime
     modes: MICROMOBILITY_RENT
   - id: RAZOR
     label: Razor
-    modes: MICROMOBILITY_RENT
-  - id: SHARED
-    label: shared
     modes: MICROMOBILITY_RENT
   - id: SPIN
     label: Spin
